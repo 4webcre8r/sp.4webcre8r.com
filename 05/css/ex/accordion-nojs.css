@@ -1,0 +1,74 @@
+/* 制御用のtype="checkbox"をすべて非表示にする
+   直接クリックはさせず、label要素との関連付けで制御する */
+input[name="accordion"] {
+    display: none;
+}
+
+/* アコーディオン ヘッド部分 */
+.accordion {
+  display: block;
+  position: relative;
+  margin: 30px 0 15px;
+  padding: 8px 8px 8px 44px;
+  line-height: 1;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 6px;
+  background: #3a94bb;
+}
+
+/* 大きな Q の字 */
+.accordion::before {
+  content: "Q";
+  position: absolute;
+  top: -24px;
+  left: -12px;
+  color: #fff;
+  font-size: 64px;
+  font-weight: normal;
+  text-shadow: 1px -1px 5px #666666;
+}
+
+/* アコーディオン ボディ部分 CSS Transitions版 */
+.body {
+  position: relative;
+  max-height: 0;
+  margin: 0;
+  padding: 0 10px 0 70px;
+  overflow: hidden;
+
+  border-radius: 6px;
+  background: #fff;
+
+  /* max-heightプロパティに対して、CSS Transitionsを指定 */
+  -webkit-transition: max-height 0.1s linear;
+  transition: max-height 0.1s linear;
+}
+
+/* アコーディオン 開いている状態
+   checked擬似クラスのついた#headと間接関係にある#bodyを表示する */
+#head1:checked + #body1,
+#head2:checked + #body2,
+#head3:checked + #body3,
+#head4:checked + #body4,
+#head5:checked + #body5 {
+  /* paddingは開いている状態に対して適用しておく */
+  padding: 10px 10px 5px 70px;
+  max-height: 300px;
+}
+
+/* 大きな A の字 */
+#head1:checked + #body1::before,
+#head2:checked + #body2::before,
+#head3:checked + #body3::before,
+#head4:checked + #body4::before,
+#head5:checked + #body5::before {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  content: "A";
+  color: #3a94bb;
+  font-size: 64px;
+  margin-top : -36px;
+  font-weight: normal;
+}

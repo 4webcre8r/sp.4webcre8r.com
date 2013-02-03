@@ -1,0 +1,64 @@
+.button_link {
+  /* インラインブロック扱いにする */
+  display: inline-block;
+
+  /* 文字色 */
+  color: #555;
+  
+  /* paddingをemで指定することで、font-sizeを大きくしてもバランスが変わらず再利用性が高くなる */
+  padding: 0.7em 1.4em;
+  
+  /* 文字装飾を無効 */
+  text-decoration: none;
+  
+  /* ボタン文字に影をつける(blurを0にすると、Android3.x以前で描画されない/ box-shadowも同様) */
+  text-shadow: 1px 1px 1px #fff;
+  
+  /* ボーダー */
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  
+  /* 内側と外側に影をつける */
+  /* カンマで区切ると複数の陰影を指定できる */
+  /* Android3.x以前はベンダープレフィックスが必要 */
+  -webkit-box-shadow: inset 0 0 1px #fff, 0 2px 3px #ccc;
+  box-shadow: inset 0 0 1px #fff, 0 2px 3px #ccc;
+  
+  /* グラデーション */
+  /* -webkit-linear-gradientプロパティはAndroid3.x以前のブラウザで対応していない */
+  /* そのため古い-webkit-gradientプロパティの併記が必要 */
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(1, rgba(240,240,240,0.8)),
+    color-stop(0, rgba(208,208,208,1.0))
+  );
+  background-image: -webkit-linear-gradient(rgba(240,240,240,0.8), rgba(208,208,208,1.0));
+  background-image: linear-gradient(rgba(240,240,240,0.8), rgba(208,208,208,1.0));
+}
+
+.button_link:hover {
+  /* ボタンの位置を少し下げる（沈み込み） */
+  position: relative;
+  top: 1px;
+  
+  /* ボーダー色を濃くする */
+  border: 1px solid #999;
+  
+  /* 外の影をやわらげて下方向への伸びをなくす */
+  /* 内の影を暗くする */
+  -webkit-box-shadow: inset 0 0 1px #aaa, 0 0 2px #ccc;
+  box-shadow: inset 0 0 1px #aaa, 0 0 2px #ccc;
+  
+  /* グラデーションの濃淡を反転させる */
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(1, rgba(208,208,208,1.0)),
+    color-stop(0, rgba(240,240,240,0.8))
+  );
+  background-image: -webkit-linear-gradient(rgba(208,208,208,1.0), rgba(240,240,240,0.8));
+  background-image: linear-gradient(rgba(208,208,208,1.0), rgba(240,240,240,0.8));
+}

@@ -1,0 +1,356 @@
+/*------------------------------------------------------------------------------
+  ドキュメント全体*/
+
+body {
+  background: #008ebb;
+}
+/*Androidを中心として、表示上の不具合などが多いため、
+  要素をタップしたときのハイライトを無効化（透明色を指定）する。
+  これによりUIパーツには手動でフィードバック表現をつける必要がある。*/
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0); 
+}
+/*------------------------------------------------------------------------------
+  ヘッダー*/
+#header {
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #333;
+  border-bottom: 3px dotted #fff;
+  background: #63b9d5;
+  padding: 10px 10px 10px 10px;
+  position: relative;
+  height: 69px;
+}
+
+/*トップページ用背景*/
+#header.top {
+  background : #63B9D5 url(../images/header_bg_sp.png) top right no-repeat;
+  position: static;
+  height: auto;
+}
+
+/*水色のサークル*/
+#header:before {
+  content: "";
+  -webkit-border-radius: 27px;
+  border-radius: 27px;
+  background: #31A4C8;
+  display: block;
+  width: 53px;
+  height: 53px;
+  position: absolute;
+  margin : 20px 0 0 0;
+  z-index: 1;
+}
+#header.top:before {
+  display: none;
+  float: none;
+}
+
+/*サイトタイトル*/
+#header h1 {
+  text-shadow: 1px 1px 3px #000;
+  position: absolute;
+  z-index: 2;
+  font-size: 12px;
+  font-weight: normal;
+  color: #fff;
+  top : 28px;
+  left: 28px;
+}
+
+#header h1 span {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+}
+/*サイトタイトル横のトップへ戻るリンク*/
+#header a {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  margin: 0 10px 5px 0;
+  display: block;
+  background: url(../images/to_top_icon.png) top left no-repeat;
+  width: 72px;
+  height: 66px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/*TOP用タイトル*/
+#header.top h1 {
+  position: static;
+  margin: 0;
+  top : 30px;
+  left: 0px;
+  padding-top : 40px;
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*------------------------------------------------------------------------------
+  メニュー*/
+#sitemenu {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top: 0.4em solid rgba(16,16,16,0.8);
+  z-index: 500;
+}
+
+/*「サイトメニュー」見出し*/
+#sitemenu h2 {
+  width: 170px;
+  padding: 0 0 0.4em;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  /*テキスト関係の調整*/
+  color: #ffffff;
+  font-size: 0.9em;
+  text-align: center;
+  text-shadow: 1px 1px 1px #333;
+  line-height: 1;
+
+  /*下辺の角を丸くする*/
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  /*背景色*/
+  background: rgba(16,16,16,0.8);
+}
+
+#sitemenu h2 a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+/*メニュー内の子要素（初期状態で非表示）*/
+#sitemenu ul,
+#sitemenu p {
+  display: block;
+  margin : 0;
+  padding: 0;
+}
+
+#sitemenu div {
+  height : 0;
+  overflow: hidden;
+  -webkit-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(96,96,96,0.8)),color-stop(0.3, rgba(64,64,64,0.8)), color-stop(1, rgba(16,16,16,0.8)));
+  background: -webkit-linear-gradient(top, 0% rgba(96,96,96,0.8), 30% rgba(64,64,64,0.8), 100% rgba(16,16,16,0.8));
+  background: linear-gradient(top, 0% rgba(96,96,96,0.8), 30% rgba(64,64,64,0.8), 100% rgba(16,16,16,0.8));
+}
+  #sitemenu .open {
+    height: 320px;
+  }
+
+#sitemenu li a {
+  display: block;
+  padding: 12px 0;
+  color : #fff;
+  text-align: center;
+  border-bottom: solid 1px #fff;
+  text-decoration: none;
+}
+
+#sitemenu li a.active,
+#sitemenu li a:active {
+  color: #fafad2;
+  background-color: rgba(255,255,255,0.1);
+}
+
+#sitemenu li:last-child a {
+  border-bottom: none;
+}
+
+#sitemenu button {
+  width: 120px;
+  background: #929074;
+  display: block;
+  margin: 0 auto;
+  padding: 6px 0;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: -1px -1px 1px #333;
+  font-size: 13px;
+  border: none;
+}
+
+
+/*------------------------------------------------------------------------------
+  コンテンツ*/
+#contents {
+  margin: 10px;
+  padding: 10px 15px;
+  background: #a8d8e7;
+}
+
+#contents h3 {
+  margin: 0 0 5px 0;
+  color: #333;
+  border-bottom: 1px solid #1A99C1;
+}
+
+/*------------------------------------------------------------------------------
+  汎用ボタン*/
+.btn {
+  /*ブロック要素*/
+  display: block;
+
+  /*paddingをemで指定することで、font-sizeを大きくしてもバランスが変わらず再利用性が高くなる*/
+  padding: 0.8em 0.6em;
+  margin-bottom: 20px;
+
+  /*ボーダー*/
+  border: solid 1px #5F7E8D;
+  border-radius: 5px;
+
+  /*テキスト類の指定*/
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  text-shadow: -1px -1px 1px #333;
+  text-decoration: none;
+
+  /*内側と外側に影をつける*/
+  /*カンマで区切ると複数の陰影を指定できる*/
+  /*Android3.x以前はベンダープレフィックスが必要*/
+  -webkit-box-shadow: inset 0 0 1px #fff, 0px 2px 3px #5F7E8D;
+  box-shadow: inset 0 0 1px #fff, 0px 2px 3px #5F7E8D;
+
+  /*グラデーション*/
+  /*-webkit-linear-gradientプロパティはAndroid3.x以前のブラウザで対応していない*/
+  /*そのため古い-webkit-gradientプロパティの併記が必要*/
+  background: -webkit-gradient(linear, left top, left bottom, from(#1A99C1), to(#0180A8));
+  background: -webkit-linear-gradient(top, 0% #1A99C1, 100% #0180A8);
+  background: linear-gradient(top, 0% #1A99C1, 100% #0180A8);
+}
+
+.btn.active,
+.btn:active {
+  /*ボタンの位置を少し下げる（沈み込み）*/
+  position: relative;
+  top: 1px;
+
+  /*ボーダー色を濃くする*/
+  border: 1px solid #333;
+
+  /*文字色をハイライトカラーにする*/
+  color: #fafad2;
+
+  /*外の影をやわらげて下方向への伸びをなくす*/
+  /*内の影を暗くする*/
+  -webkit-box-shadow: inset 0 0 1px #aaa, 0px 0px 2px #5F7E8D;
+  box-shadow: inset 0 0 1px #aaa, 0px 0px 2px #5F7E8D;
+}
+
+.btn_large {
+  font-size: 18px;
+}
+
+.btn_large::after {
+  content: "";
+  position: relative;
+  width: 25px;
+  height: 25px;
+  top: 0;
+  float: right;
+  background: url(../images/icon_arrow.png) right center no-repeat;
+  background-size: cover;
+}
+
+.btn_light {
+  background: -webkit-gradient(linear, left top, left bottom, from(#C1CCB4), to(#A6B198));
+  background: -webkit-linear-gradient(top, 0% #C1CCB4, 100% #A6B198);
+  background: linear-gradient(top, 0% #C1CCB4, 100% #A6B198);
+}
+
+.btn strong {
+  color: #FFB340;
+  text-shadow: none;
+  font-size: 11px;
+  display: inline-block;
+  -webkit-transform: rotate(25deg) translate(-2px, -6px);
+}
+
+.btn_center {
+  text-align: center;
+}
+
+/* 選択中のボタンスタイル */
+.btn_selected,
+a[rel=selected] {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9ee9a), to(#efda4f));
+  background: -webkit-linear-gradient(top,  #f9ee9a 0%,#efda4f 100%);
+  background: linear-gradient(to bottom,  #f9ee9a 0%,#efda4f 100%);
+
+  color: #333;
+  text-shadow: 1px 1px 1px #FFF;
+}
+
+/*------------------------------------------------------------------------------
+  各種アイコンの共通スタイル*/
+
+.icon_car::before,
+.icon_walk::before,
+.icon_faq::before,
+.icon_access::before,
+.icon_session::before,
+.icon_form::before {
+  content: "";
+  position: relative;
+  top: -3px;
+  float: left;
+  background: 0 0 no-repeat;
+  background-size: cover;
+}
+
+/*------------------------------------------------------------------------------
+  カラム汎用*/
+.column {
+  display: -webkit-box;
+  display: box;
+  display: flexbox;
+  -webkit-box-pack: center;
+  box-pack: center;
+  margin-left: -20px;
+}
+
+/*子要素*/
+.column > div {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  margin-left: 20px;
+}
+
+/*------------------------------------------------------------------------------
+  リスト汎用*/
+.list {
+}
+
+.list_nobullet {
+  padding: 0;
+  list-style-type: none;
+}
+
+/*------------------------------------------------------------------------------
+  フッター*/
+#footer {
+  text-align: center;
+  text-shadow: -1px -1px 1px #333;
+}
+
+#footer small {
+  color: #FFFFFF;
+  font-weight: bold;
+}

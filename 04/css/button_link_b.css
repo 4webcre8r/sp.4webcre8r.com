@@ -1,0 +1,64 @@
+/* タッチ可能領域になるA要素 */
+a.button_link {
+  /* インラインブロック扱いにする */
+  display: inline-block;
+  
+  /* タッチ可能領域にパディングをつける */
+  padding: 0.7em 1.4em;
+  
+  /* タッチ可能領域に色づけ */
+  background-color: #eef;
+
+  /* 文字装飾を無効 */
+  text-decoration: none;
+}
+
+/* ボタンの見た目 */
+/* 前項のサンプルと同じ */
+a.button_link span {
+  display: inline-block;
+
+  color: #555;
+
+  padding: 0.5em 1.0em;
+
+  text-shadow: 1px 1px 1px #fff;
+
+  border: 1px solid #aaa;
+  border-radius: 5px;
+
+  -webkit-box-shadow: inset 0 0 1px #fff, 0 2px 3px #ccc;
+  box-shadow: inset 0 0 1px #fff, 0 2px 3px #ccc;
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top
+    color-stop(1, rgba(240,240,240,0.8)),
+    color-stop(0, rgba(208,208,208,1.0))
+  );
+  background-image: -webkit-linear-gradient(rgba(240,240,240,0.8), rgba(208,208,208,1.0));
+  background-image: linear-gradient(rgba(240,240,240,0.8), rgba(208,208,208,1.0));
+}
+
+/* 押した状態のボタンの見た目 */
+/* 前項のサンプルと同じ */
+a.button_link:hover span {
+  position: relative;
+  top: 1px;
+
+  border: 1px solid #999;
+
+  -webkit-box-shadow: inset 0 0 1px #aaa, 0 0 2px #ccc;
+  box-shadow: inset 0 0 1px #aaa, 0 0 2px #ccc;
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(1, rgba(208,208,208,1.0)),
+    color-stop(0, rgba(240,240,240,0.8))
+  );
+  background-image: -webkit-linear-gradient(rgba(208,208,208,1.0), rgba(240,240,240,0.8));
+  background-image: linear-gradient(rgba(208,208,208,1.0), rgba(240,240,240,0.8));
+}

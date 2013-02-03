@@ -1,0 +1,16 @@
+#map {
+  width: 95%;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.mapcontrol {
+  margin-top: 30px;
+}
+
+#contents p {
+  text-align: right;
+  width: 95%;
+  margin: 0 auto;
+  padding-right: 10px;
+}

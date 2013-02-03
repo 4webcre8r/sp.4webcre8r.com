@@ -1,0 +1,29 @@
+<!doctype html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Canvas triangle</title>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    // <canvas>要素を取得
+    var canvas = document.getElementById('drawer');
+    // Canvas APIの描画コンテキストを取得
+    var ctx    = canvas.getContext('2d');
+
+    // 描画処理
+    ctx.beginPath();
+    ctx.moveTo(100, 100);
+    ctx.lineTo(50, 200);
+    ctx.lineTo(150, 200);
+    ctx.closePath();
+    ctx.stroke();
+
+  }, false);
+  </script>
+</head>
+
+<body>
+  <canvas id="drawer" width="400" height="400"></canvas>
+</body>
+</html>

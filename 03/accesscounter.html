@@ -1,0 +1,33 @@
+<!doctype html>
+<head>
+  <meta charset="UTF-8" />
+  <title>LocalStorage sample</title>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    // localStorageからデータを取得
+    var accessCount = window.localStorage.getItem('accessCount');
+    // 表示対象の要素
+    var target = document.getElementById('count');
+
+    // 保存されていなければ0をセット
+    if (!accessCount) {
+      accessCount = 0;
+    }
+
+    // カウントアップ
+    accessCount = parseInt(accessCount, 10) + 1;
+    // localStorageに保存
+    window.localStorage.setItem('accessCount', accessCount);
+    // アクセス回数を表示
+    target.appendChild(document.createTextNode(accessCount));
+
+  }, false);
+  </script>
+</head>
+
+<body>
+  <h1>アクセス回数：<span id="count"></span>回</h1>
+</body>
+</html>

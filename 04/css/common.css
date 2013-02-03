@@ -1,0 +1,80 @@
+/* ドキュメントの背景 */
+body {
+  background: #008ebb;
+}
+
+/* ヘッダー */
+#header {
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #333;
+  border-bottom: 3px dotted #fff;
+  background: #63b9d5;
+}
+
+/* タイトル */
+#header h1 {
+  margin: 0;
+  padding: 2em 1em 1em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* メニュー */
+#sitemenu {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top: 0.4em solid rgba(96,96,96,0.8);
+}
+
+/* メニュー内の子要素（初期状態で非表示） */
+#sitemenu > ul,
+#sitemenu > p {
+  display: none;
+}
+
+/* メニュー見出し */
+#sitemenu h2 {
+  /* レイアウト関係の調整 */
+  position: relative;
+  top: 0;
+  left: 50%;
+  width: 170px;
+  padding: 0 0 0.4em;
+  margin: 0 0 0 -85px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  /* テキスト関係の調整 */
+  color: #ffffff;
+  font-size: 0.9em;
+  text-align: center;
+  text-shadow: 1px 1px 1px #333;
+  line-height: 1;
+
+  /* 下辺の角を丸くする */
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  /* 膨らんだボタン部分にドロップシャドウを与える */
+  -webkit-box-shadow: 0 2px 2px #666;
+  box-shadow: 0 2px 2px #666;
+
+  /* グラデーション背景 */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(96,96,96,0.8)),color-stop(0.3, rgba(64,64,64,0.8)), color-stop(1, rgba(16,16,16,0.8)));
+  background: -webkit-linear-gradient(top, 0% rgba(96,96,96,0.8), 30% rgba(64,64,64,0.8), 100% rgba(16,16,16,0.8));
+  background: linear-gradient(top, 0% rgba(96,96,96,0.8), 30% rgba(64,64,64,0.8), 100% rgba(16,16,16,0.8));
+}
+
+/* コンテンツ */
+#contents {
+  margin: 10px;
+  padding: 10px 15px;
+  background: #a8d8e7;
+}
+
+/* フッター */
+#footer {
+  text-align: center;
+}

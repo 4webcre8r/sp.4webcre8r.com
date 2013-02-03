@@ -1,0 +1,131 @@
+/* コンテンツ切り替えボタンの位置調整 */
+#contents .column {
+  margin-top: 25px;
+}
+
+/* スワイプコンテンツスタイル */
+#sliderbox {
+  margin-top: 30px;
+  background: #ccc;
+  position: relative;
+}
+
+#slider {
+  overflow: hidden;
+}
+
+#sliderbox ul {
+  width: 9999px;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+}
+
+#sliderbox ul.action {
+  -webkit-transition: margin-left 0.3s ease-in-out;
+}
+
+#sliderbox li {
+  background: #fff;
+  list-style: none outside;
+  padding: 10px 20px;
+  min-height: 300px;
+}
+
+#sliderbox li h4 {
+  font-size: 13px;
+}
+
+#sliderbox li h4 span {
+  display: block;
+  color : #008EBB;
+  font-size: 16px;
+  margin-left : -2px;
+}
+
+#sliderbox p {
+  font-size: 0.9em;
+  text-align: justify;
+}
+
+#sliderbox p.lecture {
+  text-align: right;
+  margin: 2px 0;
+}
+
+#sliderbox hr {
+  border: none;
+  border-bottom: dotted 1px #333;
+}
+
+/* 講師紹介 */
+#sliderbox figure {
+  display: -webkit-box;
+  min-height: 100px;
+  margin-top: 8px;
+}
+
+#sliderbox figure img {
+  width: 100px;
+  display: block;
+}
+
+#sliderbox figcaption {
+  padding: 10px;
+}
+
+
+/* 左右ガイドの矢印 */
+#sliderbox span.arrow {
+  width: 28px;
+  height: 65px;
+  position: absolute;
+  display: block;
+  top : 150px;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+#sliderbox span.left {
+  background : url(../images/arrow_left.png) top left no-repeat;
+  left : -14px;
+  -webkit-animation-name: waveleft;
+}
+
+#sliderbox span.right {
+  background : url(../images/arrow_right.png) top left no-repeat;
+  right: -14px;
+  -webkit-animation-name: waveright;
+}
+
+/* 左側矢印アニメーション設定 */
+@-webkit-keyframes waveleft {
+  0%   { margin-left : -3px; }
+  10%  { margin-left : -2px; }
+  20%  { margin-left : -1px; }
+  30%  { margin-left : -0px; }
+  40%  { margin-left : 1px; }
+  50%  { margin-left : 2px; }
+  60%  { margin-left : 3px; }
+  70%  { margin-left : 2px; }
+  80%  { margin-left : 1px; }
+  90%  { margin-left : 0px; }
+  100% { margin-left : -3px; }
+}
+
+/* 右側矢印アニメーション設定 */
+@-webkit-keyframes waveright {
+  0%   { margin-right : -3px; }
+  10%  { margin-right : -2px; }
+  20%  { margin-right : -1px; }
+  30%  { margin-right : -0px; }
+  40%  { margin-right : 1px; }
+  50%  { margin-right : 2px; }
+  60%  { margin-right : 3px; }
+  70%  { margin-right : 2px; }
+  80%  { margin-right : 1px; }
+  90%  { margin-right : 0px; }
+  100% { margin-right : -3px; }
+}

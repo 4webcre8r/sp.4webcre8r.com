@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="format-detection" content="telephone=no">
+<title>講師紹介 - スマートフォンサイト制作実践ガイド</title>
+<link href="css/normalize.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet">
+<link href="css/session.css" rel="stylesheet">
+<script src="js/main.js"></script>
+<script src="js/session.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var box = document.getElementById('sliderbox');
+  
+  new AppSlider(box);
+}, false);
+</script>
+
+</head>
+<body>
+
+<header id="header">
+  <h1>スマートフォンサイト制作実践ガイド<span>講師紹介</span></h1>
+  <a href="index.html">TOPページに戻る</a>
+</header>
+
+<nav id="sitemenu">
+  <div>
+    <ul>
+      <li><a href="session.html">セッション概要</a></li>
+      <li><a href="faq.html">よくある質問</a></li>
+      <li><a href="access.html">会場アクセス</a></li>
+      <li><a href="form.php">参加申し込み</a></li>
+      <li><a href="index.html">トップページ</a></li>
+    </ul>
+    <p><button id="closenav">メニューを閉じる</button></p>
+  </div>
+  <h2><a href="#sitemenu">サイトメニュー</a></h2>
+</nav>
+
+<section id="contents">
+  <h3>左右にスワイプすると、コンテンツが切り替えられます</h3>
+  <div class="column">
+    <div><a href="session.html" class="btn btn_center">セッション</a></div>
+    <div><a href="lecture.html" class="btn btn_center btn_selected">講師紹介</a></div>
+  </div>
+  <div id="sliderbox">
+    <div id="slider">
+      <ul>
+        <li>
+          <figure>
+            <img src="images/icon_ando.png" alt="安藤建一" />
+            <figcaption>
+              <h4><span>安藤建一</span>(あんどう けんいち)</h4>
+            </figcaption>
+          </figure>
+          <p>日本CodeIgniterユーザ会メンバー。株式会社音生（ネオ）取締役システムディレクター。日本CodeIgniterユーザ会を主催。「PHP逆引きレシピ」（翔泳社）、「Webサイト制作者のためのPHP入門講座」（技術評論社）など著書多数。</p>
+        </li>
+       <li>
+          <figure>
+            <img src="images/icon_sato.png" alt="佐藤歩" />
+            <figcaption>
+              <h4><span>佐藤歩</span>（さとう あゆむ）</h4>
+            </figcaption>
+          </figure>
+          <p>株式会社サイバーエージェント、マークアップエンジニア。JavaScript/HTML5を中心にフロントエンド技術を探求中。バックエンド寄りWebエンジニアからの転身で、サーバサイドの経験と知識を活かしながら、現職サービスのフロント開発に取り組んでいる。</p>
+        </li>
+        <li>
+          <figure>
+            <img src="images/icon_sugimoto.png" alt="杉本吉章" />
+            <figcaption>
+              <h4><span>杉本吉章</span>（すぎもと よしあき）</h4>
+            </figcaption>
+          </figure>
+          <p>株式会社音生（ネオ）、フロントエンドエンジニア。マークアップからサーバーサイドまでを担当し、コードの最適化や高速化が趣味。著書に「Webサイト制作者のためのJavaScriot入門講座」（技術評論社）、プロダクトにseezoo cms（http://seezoo.org）。</p>
+        </li>
+      </ul>
+    </div>
+    <span class="arrow left">&nbsp;</span>
+    <span class="arrow right">&nbsp;</span>
+  </div>
+</section>
+
+<footer id="footer">
+  <p><small>Copyright Samplesite all rights reserved.</small></p>
+</footer>
+
+</body>
+</html>

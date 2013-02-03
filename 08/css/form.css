@@ -1,0 +1,80 @@
+.form_area {
+	background: #eee;
+	border: solid 1px #ccc;
+	-webkit-border-radius: 16px;
+	border-radius        : 16px;
+	padding: 16px;
+	-webkit-transition: height 0.5s ease-in-out;
+}
+
+.form_item {
+	margin-top : 20px;
+}
+
+.form_item label {
+	line-height: 1.8;
+}
+
+select,
+.form_item [type="text"],
+.form_item [type="tel"],
+.form_item [type="email"],
+.form_item [type="number"] {
+	-webkit-border-radius: 5px;
+	border-radius        : 5px;
+}
+
+/* チェック系インターフェースの右側、テキストとの間に余白 */
+.form_item [type="radio"],
+.form_item [type="checkbox"] {
+  margin-right: 0.3em;
+}
+
+/*　長いテキスト入力系項目の幅を設定　*/
+.expect_string {
+  width: 90%;
+}
+
+/* タッチ操作を想定した要素 */
+.expect_touch {
+  margin: 0.5em 0.3em;
+  padding: 0.5em 0.3em;
+  border: 1px solid gray;
+}
+
+/* バリデーション用メッセージ ※8章で使用 */
+.validation_message {
+  display: none;
+  color: red;
+  background-color: #ffdab9;
+}
+
+/* 送信ボタンのラッパー要素 */
+.form_submit {
+  font-size: 100%;
+  text-align: center;
+  margin-top : 40px;
+}
+
+/* 送信ボタンのスタイル */
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+  background: -webkit-linear-gradient(top, 0% #ffffff, 100% #dddddd);
+  background: linear-gradient(top, 0% #ffffff, 100% #dddddd);
+  padding : 5px 0;
+  border: solid 1px #d6d6d6;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px #333;
+}
+
+/* 年齢フィールドのサイズ調整 */
+input[name="age"] {
+  width: 3em;
+}
+
+/* 電話番号フィールドのサイズ調整 */
+input[name="tel"] {
+  width: 12em;
+}

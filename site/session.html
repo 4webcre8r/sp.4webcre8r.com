@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="format-detection" content="telephone=no">
+<title>セッション概要 - スマートフォンサイト制作実践ガイド</title>
+<link href="css/normalize.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet">
+<link href="css/session.css" rel="stylesheet">
+<script src="js/main.js"></script>
+<script src="js/session.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var box = document.getElementById('sliderbox');
+  
+  new AppSlider(box);
+}, false);
+</script>
+
+</head>
+<body>
+
+<header id="header">
+  <h1>スマートフォンサイト制作実践ガイド<span>セッション概要</span></h1>
+  <a href="index.html">TOPページに戻る</a>
+</header>
+
+<nav id="sitemenu">
+  <div>
+    <ul>
+      <li><a href="session.html">セッション概要</a></li>
+      <li><a href="faq.html">よくある質問</a></li>
+      <li><a href="access.html">会場アクセス</a></li>
+      <li><a href="form.php">参加申し込み</a></li>
+      <li><a href="index.html">トップページ</a></li>
+    </ul>
+    <p><button id="closenav">メニューを閉じる</button></p>
+  </div>
+  <h2><a href="#sitemenu">サイトメニュー</a></h2>
+</nav>
+
+<section id="contents">
+  <h3>左右にスワイプすると、コンテンツが切り替えられます</h3>
+  <div class="column">
+    <div><a href="session.html" class="btn btn_center btn_selected">セッション</a></div>
+    <div><a href="lecture.html" class="btn btn_center">講師紹介</a></div>
+  </div>
+  <div id="sliderbox">
+    <div id="slider">
+      <ul>
+        <li>
+          <h4>セッション1<span>HTML5マークアップの基本</span></h4>
+          <article>
+            <p class="lecture">講師: 安藤建一</p>
+            <hr>
+            <p>HTML5の登場によって、フロントエンドの重要性はますます高まってきたと言えます。特にスマートフォン向けのWebサイト制作においては、HTML5でマークアップを行う機会が増えてくることでしょう。</p>
+            <p>本セッションでは、HTML5から新しく追加されたタグを学ぶとともに、HTML5で書かれた既存サイトを見ながら、従来のXHTMLのマークアップからの移行やコンテンツモデルの形成について学びましょう。</p>
+          </article>
+        </li>
+        <li>
+          <h4>セッション2<span>CSS3で表現するリッチなUI</span></h4>
+          <article>
+            <p class="lecture">講師: 佐藤歩</p>
+            <hr>
+            <p>一昔前までは難しかった角丸やグラデーションも、CSSで簡単に表現できるようになりました。スマートフォン向けWebサイトにおいては、その表現力を積極的に利用することで、実際のスマートフォンのUIに近い表現も可能になります。</p>
+            <p>本セッションでは、特にスマートフォン向けのUIパーツについて解説し、ユーザービリティを高めるためのレイアウトとスタイリング手法を学んで頂きます。</p>
+          </article>
+        </li>
+        <li>
+          <h4>セッション3<span>モダンJavaScript再入門</span></h4>
+          <article>
+            <p class="lecture">講師: 杉本吉章</p>
+            <hr>
+            <p>今日、その価値が見直されてきたJavaScriptですが、HTML5の登場に合わせて、クライアントサイドだけにとどまらず、その利用シーンは実に多岐に渡るようになりました。</p>
+            <p>本セッションでは、新しく利用可能になったJavaScriptのAPIを取り上げます。APIの利用方法と活用するシーンのアイデアを考えながら、改めてJavaScriptを学び直しましょう。</p>
+          </article>
+        </li>
+      </ul>
+    </div>
+    <span class="arrow left"></span>
+    <span class="arrow right"></span>
+  </div>
+</section>
+
+<footer id="footer">
+  <p><small>Copyright Samplesite all rights reserved.</small></p>
+</footer>
+
+</body>
+</html>

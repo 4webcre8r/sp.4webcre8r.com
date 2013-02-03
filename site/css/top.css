@@ -1,0 +1,64 @@
+/*開催概要*/
+#contents dt {
+  float: left;
+  width : 80px;
+  margin: 0 20px 10px 0;
+  padding: 1px 0;
+  clear: both;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  background: #fff;
+}
+
+#contents dd {
+  margin: 0 20px 10px 90px;
+  font-size: 13px;
+  min-height: 30px;
+}
+
+hr {
+  border: none;
+  border-top: solid 1px #8A9EA5;
+  box-shadow: 1px 1px 1px #FFFFFF;
+  margin-bottom: 20px;
+}
+
+/*FAQ*/
+.icon_faq::before {
+  width: 25px;
+  height: 25px;
+  margin-right: 3px;
+  background-image: url(../images/top_icon_faq.png);
+}
+
+/*交通アクセス*/
+.icon_access::before {
+  width: 25px;
+  height: 25px;
+  margin-right: 3px;
+  background-image: url(../images/top_icon_access.png);
+}
+
+/*セッション概要*/
+.icon_session::before {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  background-image: url(../images/top_icon_session.png);
+}
+
+/*参加申し込み*/
+.icon_form::before {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  background-image: url(../images/top_icon_form.png);
+}
+
+.banner {
+  display: block;
+  background-color: #FFB340;
+  text-indent: -9999px;
+}

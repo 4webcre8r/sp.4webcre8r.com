@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="format-detection" content="telephone=no">
+<title>FAQよくある質問 - スマートフォンサイト制作実践ガイド</title>
+<link href="css/normalize.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet">
+<link href="css/accordion.css" rel="stylesheet">
+<script src="js/main.js"></script>
+<script src="js/accordion.js"></script>
+<script>
+// DOM構築後にアプリケーションを起動する
+document.addEventListener('DOMContentLoaded', function(evt) {
+  window.AppAccordion('.accordion');
+}, false);
+</script>
+</head>
+<body>
+
+<header id="header">
+  <h1>スマートフォンサイト制作実践ガイド<span>よくある質問</span></h1>
+  <a href="index.html">TOPページに戻る</a>
+</header>
+
+<nav id="sitemenu">
+  <div>
+    <ul>
+      <li><a href="session.html">セッション概要</a></li>
+      <li><a href="faq.html">よくある質問</a></li>
+      <li><a href="access.html">会場アクセス</a></li>
+      <li><a href="form.php">参加申し込み</a></li>
+      <li><a href="index.html">トップページ</a></li>
+    </ul>
+    <p><button id="closenav">メニューを閉じる</button></p>
+  </div>
+  <h2><a href="#sitemenu">サイトメニュー</a></h2>
+</nav>
+
+<section id="contents">
+  <h3 class="accordion">学生 or 初心者ですが参加したいです</h3>
+  <div class="body">
+    <p>広くいろいろな方にご参加いただきたいと考えておりますので、ぜひご参加ください。特に学生の方は、ぜひ他の参加者といろいろと交流してみてください。</p>
+  </div>
+
+  <h3 class="accordion">セミナー中の入退室はできますか？</h3>
+  <div class="body">
+    <p>入退室はご自由にしていただけます。セミナー中の入退室にともなう移動の際には、他の参加者の方々へのご配慮をお願い致します。</p>
+  </div>
+
+  <h3 class="accordion">領収書は発行してもらえますか？</h3>
+  <div class="body">
+    <p>当日の受付時にお渡しいたします。懇親会の領収書は、勉強会本編とは別でお渡しいたします。</p>
+  </div>
+
+  <h3 class="accordion">申し込みした後、特に連絡がきません</h3>
+  <div class="body">
+    <p>メールが不着になっている可能性があります。その際はお手数ですが master@example.com までご連絡ください。</p>
+  </div>
+
+  <h3 class="accordion">ネット環境はありますか？</h3>
+  <div class="body">
+    <p>無線LAN環境を用意していますが、全員が快適には利用できない場合があります。お仕事などで、確実なネット環境が必要な場合は、モバイルインターネット環境を各自でご用意ください。</p>
+  </div>
+</section>
+
+<footer id="footer">
+  <p><small>Copyright sample event site all rights reserved.</small></p>
+</footer>
+
+</body>
+</html>
