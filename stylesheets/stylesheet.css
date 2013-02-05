@@ -258,8 +258,8 @@ form {
 }
 
 img {
-  width: 100%;
-  max-width: 100%;
+/*  width: 100%;
+  max-width: 100%;*/
 }
 
 /*******************************************************************************
@@ -374,7 +374,18 @@ Full-Width Styles
   background: #212121;
 }
 
+.img_cover {
+  float: left;
+  margin-right: 20px;
+}
 
+.list_summary {
+  padding: 10px;
+}
+
+.para_summary {
+  clear: both;
+}
 
 /*******************************************************************************
 Small Device Styles
